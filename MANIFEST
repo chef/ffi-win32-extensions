@@ -1,0 +1,9 @@
+* ffi-win32-extensions.gemspec
+* LICENSE
+* MANIFEST
+* Rakefile
+* README
+* lib/ffi-win32-extensions.rb
+* lib/ffi/win32/extensions.rb
+* test/test_ffi_extensions.rb
+* test/test_string_extensions.rb
