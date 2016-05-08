@@ -70,10 +70,13 @@ class String
   end
 
   # Read a wide character string up until the first double null, and delete
-  # any remaining null characters.
+  # any remaining null characters. If this fails (typically because there
+  # are only null characters) then nil is returned instead.
   #
   def wstrip
     self.force_encoding('UTF-16LE').encode('UTF-8', :invalid=>:replace, :undef=>:replace).
     split("\x00")[0].encode(Encoding.default_external)
+  rescue
+    nil
   end
 end
