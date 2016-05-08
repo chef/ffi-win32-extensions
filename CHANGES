@@ -1,2 +1,5 @@
+= 1.0.1 - 8-May-2016
+* The String#wstrip method defaults to nil on failure.
+
 = 1.0.0 - 7-May-2016
 * Initial release
