@@ -41,13 +41,20 @@ module FFI
   # The message will always be English regardless of your locale.
   #
   def windows_error_message(function, err=FFI.errno)
-    flags = 0x00001000 | 0x00000200 # ARGUMENT_ARRAY + SYSTEM
-    buf = FFI::MemoryPointer.new(:char, 1024)
+    error_message = ''
+
+    # ARGUMENT_ARRAY + SYSTEM + MAX_WIDTH_MASK
+    flags = 0x00001000 | 0x00000200 | 0x000000FF
 
     # 0x0409 = MAKELANGID(LANG_ENGLISH, SUBLANG_ENGLISH_US)
-    FormatMessage(flags, nil, err , 0x0409, buf, 1024, nil)
+    # We use English for errors because Ruby uses English for errors.
 
-    function + ': ' + buf.read_string.strip
+    FFI::MemoryPointer.new(:char, 1024) do |buf|
+      length = FormatMessage(flags, nil, err , 0x0409, buf, buf.size, nil)
+      error_message = function + ': ' + buf.read_string(length).strip
+    end
+
+    error_message
   end
 
   # Raises a Windows specific error using SystemCallError that is based on
@@ -78,5 +85,12 @@ class String
     split("\x00")[0].encode(Encoding.default_external)
   rescue
     nil
+  end
+
+  # Read a wide character string up until the first double null, and delete
+  # any remaining null characters.
+  #
+  def read_wide_string
+    self[/^.*?(?=\x00{2})/].delete(0.chr)
   end
 end
