@@ -18,8 +18,9 @@
 
   The following String instance methods have been added:
 
-  * wincode - Converts a string to UTF-16LE for use in wide character functions.
-  * wstrip  - Like String#strip, but for wide strings.
+  * wincode          - Converts a string to UTF-16LE for use in wide char functions.
+  * wstrip           - Like String#strip, but for wide strings.
+  * read_wide_string - Reads a Ruby string up to the first double null.
 
   Example:
 
