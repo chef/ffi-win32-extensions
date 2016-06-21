@@ -1,3 +1,7 @@
+= 1.0.2 - 20-Jun-2016
+* Added the String#read_wide_string method.
+* Refactored the windows_error_message method a bit.
+
 = 1.0.1 - 8-May-2016
 * The String#wstrip method defaults to nil on failure.
 
