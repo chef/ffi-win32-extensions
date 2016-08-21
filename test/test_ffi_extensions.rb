@@ -24,6 +24,16 @@ class TC_FFI_Win32_Extensions < Test::Unit::TestCase
     assert_respond_to(FFI, :raise_windows_error)
   end
 
+  test 'read_wide_string basic functionality' do
+    assert_respond_to(@ptr, :read_wide_string)
+    assert_kind_of(String, @ptr.read_wide_string)
+  end
+
+  test 'read_wide_string has optional argument' do
+    assert_nothing_raised{ @ptr.read_wide_string }
+    assert_nothing_raised{ @ptr.read_wide_string(@ptr.size) }
+  end
+
   def teardown
     @ptr.free
     @ptr = nil

@@ -18,7 +18,7 @@ class FFI::Pointer
 
   # Read +num_bytes+ from a wide character string pointer.
   #
-  def read_wide_string(num_bytes)
+  def read_wide_string(num_bytes = self.size)
     read_bytes(num_bytes).force_encoding('UTF-16LE')
       .encode('UTF-8', :invalid => :replace, :undef => :replace)
       .split(0.chr).first.force_encoding(Encoding.default_external)
