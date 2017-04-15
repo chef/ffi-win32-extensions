@@ -17,11 +17,15 @@ class FFI::Pointer
   end
 
   # Read +num_bytes+ from a wide character string pointer.
+  # If this fails (typically because there are only null characters)
+  # then an empty string is returned instead.
   #
   def read_wide_string(num_bytes = self.size)
     read_bytes(num_bytes).force_encoding('UTF-16LE')
       .encode('UTF-8', :invalid => :replace, :undef => :replace)
       .split(0.chr).first.force_encoding(Encoding.default_external)
+  rescue
+    ""    
   end
 end
 
