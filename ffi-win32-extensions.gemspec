@@ -6,13 +6,12 @@ Gem::Specification.new do |spec|
   spec.authors    = 'Daniel J. Berger'
   spec.license    = 'Apache 2.0'
   spec.email      = 'djberg96@gmail.com'
-  spec.homepage   = 'http://github.com/djberg96/ffi-win32-extensions'
+  spec.homepage   = 'http://github.com/chef/ffi-win32-extensions'
   spec.summary    = 'Extends the FFI and String classes on MS Windows'
   spec.test_files = Dir['test/test*']
   spec.files      = Dir['**/*'].reject{ |f| f.include?('git') }
-  spec.cert_chain = ['certs/djberg96_pub.pem']
 
-  spec.extra_rdoc_files  = ['README', 'CHANGES', 'MANIFEST']
+  spec.extra_rdoc_files  = ['README.md', 'CHANGES', 'MANIFEST']
 
   spec.add_dependency('ffi')
   spec.add_development_dependency('test-unit')
