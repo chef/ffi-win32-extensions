@@ -1,5 +1,3 @@
-require 'rubygems'
-
 Gem::Specification.new do |spec|
   spec.name       = 'ffi-win32-extensions'
   spec.version    = '1.0.3'
