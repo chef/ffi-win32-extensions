@@ -1,4 +1,4 @@
-require 'ffi'
+require 'ffi' unless defined?(FFI)
 
 class FFI::Pointer
   # Returns an array of strings for char** types.

@@ -7,7 +7,7 @@ CLEAN.include('**/*.gem', '**/*.rbc')
 namespace :gem do
   desc "Create the ffi-win32-extensions gem"
   task :create => [:clean] do
-    require 'rubygems/package'
+    require 'rubygems/package' unless defined?(Gem::Package)
     spec = eval(IO.read('ffi-win32-extensions.gemspec'))
     spec.signing_key = File.join(Dir.home, '.ssh', 'gem-private_key.pem')
     Gem::Package.build(spec, true)
