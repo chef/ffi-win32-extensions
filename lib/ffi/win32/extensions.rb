@@ -27,6 +27,39 @@ class FFI::Pointer
   rescue
     ""    
   end
+
+  # Read null-terminated Unicode strings.
+  #
+  def read_wstring(num_wchars = nil)
+    if num_wchars.nil?
+      # Find the length of the string
+      length = 0
+      last_char = nil
+      while last_char != "\000\000"
+        length += 1
+        last_char = get_bytes(0, length * 2)[-2..-1]
+      end
+
+      num_wchars = length
+    end
+
+    wide_to_utf8(get_bytes(0, num_wchars * 2))
+  end
+
+  def wide_to_utf8(wstring)
+    # ensure it is actually UTF-16LE
+    # Ruby likes to mark binary data as ASCII-8BIT
+    wstring = wstring.force_encoding("UTF-16LE")
+
+    # encode it all as UTF-8 and remove trailing CRLF and NULL characters
+    wstring.encode("UTF-8").strip
+  end
+
+  def read_utf16string
+    offset = 0
+    offset += 2 while get_bytes(offset, 2) != "\x00\x00"
+    get_bytes(0, offset).force_encoding("utf-16le").encode("utf-8")
+  end
 end
 
 module FFI
