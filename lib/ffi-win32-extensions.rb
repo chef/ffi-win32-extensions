@@ -1,1 +1,1 @@
-require_relative 'ffi/win32/extensions'
+require_relative "ffi/win32/extensions"
