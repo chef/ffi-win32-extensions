@@ -10,6 +10,11 @@
 
 #### Merged Pull Requests
 - Add style rake task [#8](https://github.com/chef/ffi-win32-extensions/pull/8) ([tas50](https://github.com/tas50))
+- Move read_wstring method from chef to ffi-win32-extensions [#5](https://github.com/chef/ffi-win32-extensions/pull/5) ([kapilchouhan99](https://github.com/kapilchouhan99))
+- Autocorrected the repository with Chefstyle
+- Moved dev deps into a Gemfile
+- Renamed CHANGES to CHANGELOG.md and converted it to markdown
+- 
 <!-- latest_stable_release -->
 
 ## 1.0.3 - 21-Aug-2016
