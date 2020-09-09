@@ -1,9 +1,17 @@
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
 
 # ffi-win32-extensions Changelog
+<!-- latest_release 1.0.4 -->
+## [ffi-win32-extensions-1.0.4](https://github.com/chef/ffi-win32-extensions/tree/ffi-win32-extensions-1.0.4) (2020-09-09)
+
+#### Merged Pull Requests
+- Add style rake task [#8](https://github.com/chef/ffi-win32-extensions/pull/8) ([tas50](https://github.com/tas50))
 <!-- latest_release -->
-<!-- latest_release -->
-<!-- release_rollup -->
+<!-- release_rollup since=1.0.3 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- Add style rake task [#8](https://github.com/chef/ffi-win32-extensions/pull/8) ([tas50](https://github.com/tas50)) <!-- 1.0.4 -->
 <!-- release_rollup -->
 <!-- latest_stable_release -->
 ## 1.0.3 - 21-Aug-2016
