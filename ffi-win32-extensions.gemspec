@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name       = "ffi-win32-extensions"
-  spec.version    = "1.0.4"
+  spec.version    = "1.0.5"
   spec.authors    = "Daniel J. Berger"
   spec.license    = "Apache 2.0"
   spec.email      = "djberg96@gmail.com"
