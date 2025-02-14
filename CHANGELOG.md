@@ -1,16 +1,17 @@
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
 
 # ffi-win32-extensions Changelog
-<!-- latest_release 1.0.5 -->
-## [ffi-win32-extensions-1.0.5](https://github.com/chef/ffi-win32-extensions/tree/ffi-win32-extensions-1.0.5) (2021-06-25)
+<!-- latest_release 1.1.0 -->
+## [ffi-win32-extensions-1.1.0](https://github.com/chef/ffi-win32-extensions/tree/ffi-win32-extensions-1.1.0) (2025-02-14)
 
 #### Merged Pull Requests
-- Upgrade to GitHub-native Dependabot [#9](https://github.com/chef/ffi-win32-extensions/pull/9) ([dependabot-preview[bot]](https://github.com/dependabot-preview[bot]))
+- Updating ffi support [#12](https://github.com/chef/ffi-win32-extensions/pull/12) ([johnmccrae](https://github.com/johnmccrae))
 <!-- latest_release -->
 <!-- release_rollup since=1.0.4 -->
 ### Changes not yet released to rubygems.org
 
 #### Merged Pull Requests
+- Updating ffi support [#12](https://github.com/chef/ffi-win32-extensions/pull/12) ([johnmccrae](https://github.com/johnmccrae)) <!-- 1.1.0 -->
 - Upgrade to GitHub-native Dependabot [#9](https://github.com/chef/ffi-win32-extensions/pull/9) ([dependabot-preview[bot]](https://github.com/dependabot-preview[bot])) <!-- 1.0.5 -->
 <!-- release_rollup -->
 <!-- latest_stable_release -->
