@@ -1,9 +1,17 @@
 <!-- usage documentation: http://expeditor-docs.es.chef.io/configuration/changelog/ -->
 
 # ffi-win32-extensions Changelog
+<!-- latest_release 1.1.1 -->
+## [ffi-win32-extensions-1.1.1](https://github.com/chef/ffi-win32-extensions/tree/ffi-win32-extensions-1.1.1) (2026-04-17)
+
+#### Merged Pull Requests
+- CHEF-28546 - Create SECURITY.md file with standard template [#20](https://github.com/chef/ffi-win32-extensions/pull/20) ([cgunasree08](https://github.com/cgunasree08))
 <!-- latest_release -->
-<!-- latest_release -->
-<!-- release_rollup -->
+<!-- release_rollup since=1.1.0 -->
+### Changes not yet released to rubygems.org
+
+#### Merged Pull Requests
+- CHEF-28546 - Create SECURITY.md file with standard template [#20](https://github.com/chef/ffi-win32-extensions/pull/20) ([cgunasree08](https://github.com/cgunasree08)) <!-- 1.1.1 -->
 <!-- release_rollup -->
 <!-- latest_stable_release -->
 ## [ffi-win32-extensions-1.1.0](https://github.com/chef/ffi-win32-extensions/tree/ffi-win32-extensions-1.1.0) (2025-02-14)
