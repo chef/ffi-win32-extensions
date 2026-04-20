@@ -55,3 +55,7 @@ Apache 2.0
 ## Author
 
 Daniel Berger
+
+# Copyright
+
+See [COPYRIGHT.md](./COPYRIGHT.md).
