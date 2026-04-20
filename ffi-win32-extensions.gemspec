@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.test_files = Dir["test/test*"]
   spec.files      = Dir["**/*"].reject { |f| f.include?("git") }
 
-  spec.add_dependency("ffi", ">= 1.15.5", "<= 1.17.0")
+  spec.add_dependency("ffi", ">= 1.15.5", "<= 1.18.0")
 
   spec.description = <<-EOF
     The ffi-win32-extensions library adds additional methods to the FFI
